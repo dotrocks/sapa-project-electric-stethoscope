@@ -1,0 +1,65 @@
+\def\paperTitle{SAPA Capsule Project}
+\def\paperSubTitle{Electric Stethoscope}
+
+\documentclass[
+	12pt,twoside,a4paper
+]{report}
+
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage{etoc}
+\usepackage{xcolor, soul}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage[style=apa, backend=biber]{biblatex}
+
+\addbibresource{refs.bib}
+\DeclareLanguageMapping{english}{english-apa}
+
+\sethlcolor{yellow}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[l]{\paperTitle}
+	\fancyhead[c]{\paperSubTitle}
+	\fancyhead[r]{December 30, 2024}
+	\fancyfoot[le, ro]{Page \thepage}
+	\setlength{\headheight}{15pt}
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+}	
+
+\thispagestyle{plain}
+
+\renewcommand{\etocaftertitlehook}{\thispagestyle{plain}}
+\renewcommand{\etocaftertochook}{\thispagestyle{plain}}
+
+\begin{document}
+	\include{title}
+	\tableofcontents
+
+	\include{chapters/01-introduction}
+	\include{chapters/02-hardware}
+	\include{chapters/03-software}
+	\include{chapters/04-conclusion}
+
+	\newpage
+	\thispagestyle{plain}
+
+	\chapter*{Appendix}
+	\addcontentsline{toc}{chapter}{Appendix}
+
+	\section*{Appendix A: Github Repositoy}\label{sec:appendix_a}
+	\addcontentsline{toc}{section}{Github Repository}
+	\url{https://github.com/dotrocks/sapa-project-electric-stethoscope}
+
+	\printbibliography{}
+	\addcontentsline{toc}{chapter}{Bibliography}
+\end{document}
