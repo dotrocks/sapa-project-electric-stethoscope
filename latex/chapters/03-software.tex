@@ -97,7 +97,7 @@ void loop() {
 }
 \end{lstlisting}
 
-This code prints the analog signal value to the serial port with starting and ending characters. This way, we can prevent Python from reading the serial data incorrectly. 
+This code prints the analog signal value to the serial port with starting and ending characters. This way, we can prevent Python from reading the serial data incorrectly.
 
 \newpage
 \thispagestyle{plain}
@@ -155,22 +155,22 @@ With this code, we read the serial port and process the analog signal. We normal
 While these codes are the most important parts of the software development, we also developed a GUI to show the real-time signal which we are not mentioning the code here. The GUI is developed using the tkinter and matplotlib library. You can always check the full code from the GitHub repository of the project, which is given in Appendix \ref{sec:appendix_a}.
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{assets/plots.png}
-    \caption{GUI of the Project}
-    \label{fig:gui}
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/plots.png}
+	\caption{GUI of the Project}
+	\label{fig:gui}
 \end{figure}
 
 \begin{figure}[h]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \includegraphics[width=0.9\textwidth , height=0.2\textheight]{assets/filter-type-selector.png}
-        \caption{Filter Type Selector}
-        \label{fig:gui-filter-type-selector}
-    \end{minipage}%
-    \begin{minipage}{0.5\textwidth}
-        \includegraphics[width=0.9\textwidth , height=0.2\textheight]{assets/filter-method-selector.png}
-        \caption{Filter Method Selector}
-        \label{fig:gui-filter-method-selector}
-    \end{minipage}
+	\centering
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth , height=0.2\textheight]{assets/filter-type-selector.png}
+		\caption{Filter Type Selector}
+		\label{fig:gui-filter-type-selector}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=0.9\textwidth , height=0.2\textheight]{assets/filter-method-selector.png}
+		\caption{Filter Method Selector}
+		\label{fig:gui-filter-method-selector}
+	\end{minipage}
 \end{figure}
